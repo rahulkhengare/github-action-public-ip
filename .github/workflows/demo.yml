@@ -16,4 +16,4 @@ jobs:
         echo ${{ steps.ip.outputs.ipv4 }}
         echo ${{ steps.ip.outputs.ipv6 }}
         ifconfig docker0
-        ifconfig docker0 | grep inet | awk '*** print $2***'
+        ifconfig docker0 | grep inet | awk '{ print $2 }'
